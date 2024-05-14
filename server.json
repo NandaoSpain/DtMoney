@@ -15,6 +15,166 @@
       "category": "Comida",
       "price": 50,
       "createdAt": "2024-05-14T14:29:25.058Z"
+    },
+    {
+      "id": "3",
+      "description": "Freelance de Design",
+      "type": "income",
+      "category": "Serviço",
+      "price": 2000,
+      "createdAt": "2024-05-14T15:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "description": "Compra de Livros",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 300,
+      "createdAt": "2024-05-14T16:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "description": "Assinatura Netflix",
+      "type": "outcome",
+      "category": "Entretenimento",
+      "price": 45,
+      "createdAt": "2024-05-13T14:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "description": "Venda de Curso Online",
+      "type": "income",
+      "category": "Educação",
+      "price": 500,
+      "createdAt": "2024-05-12T14:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "description": "Manutenção do Carro",
+      "type": "outcome",
+      "category": "Transporte",
+      "price": 1200,
+      "createdAt": "2024-05-11T14:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "description": "Compra de Roupas",
+      "type": "outcome",
+      "category": "Vestuário",
+      "price": 600,
+      "createdAt": "2024-05-10T14:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "description": "Venda de Artesanato",
+      "type": "income",
+      "category": "Artesanato",
+      "price": 800,
+      "createdAt": "2024-05-09T14:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "description": "Compra de Móveis",
+      "type": "outcome",
+      "category": "Casa",
+      "price": 3000,
+      "createdAt": "2024-05-08T14:00:00.000Z"
+    },
+    {
+      "id": "11",
+      "description": "Salário",
+      "type": "income",
+      "category": "Salário",
+      "price": 8000,
+      "createdAt": "2024-05-07T14:00:00.000Z"
+    },
+    {
+      "id": "12",
+      "description": "Consulta Médica",
+      "type": "outcome",
+      "category": "Saúde",
+      "price": 250,
+      "createdAt": "2024-05-06T14:00:00.000Z"
+    },
+    {
+      "id": "13",
+      "description": "Venda de E-book",
+      "type": "income",
+      "category": "Educação",
+      "price": 100,
+      "createdAt": "2024-05-05T14:00:00.000Z"
+    },
+    {
+      "id": "14",
+      "description": "Compra de Equipamento de Escritório",
+      "type": "outcome",
+      "category": "Trabalho",
+      "price": 1500,
+      "createdAt": "2024-05-04T14:00:00.000Z"
+    },
+    {
+      "id": "15",
+      "description": "Venda de Aplicativo",
+      "type": "income",
+      "category": "Tecnologia",
+      "price": 10000,
+      "createdAt": "2024-05-03T14:00:00.000Z"
+    },
+    {
+      "id": "16",
+      "description": "Compra de Supermercado",
+      "type": "outcome",
+      "category": "Comida",
+      "price": 400,
+      "createdAt": "2024-05-02T14:00:00.000Z"
+    },
+    {
+      "id": "17",
+      "description": "Venda de Serviço de Consultoria",
+      "type": "income",
+      "category": "Serviço",
+      "price": 3000,
+      "createdAt": "2024-05-01T14:00:00.000Z"
+    },
+    {
+      "id": "18",
+      "description": "Compra de Eletrônicos",
+      "type": "outcome",
+      "category": "Tecnologia",
+      "price": 2500,
+      "createdAt": "2024-04-30T14:00:00.000Z"
+    },
+    {
+      "id": "19",
+      "description": "Venda de Pacote de Turismo",
+      "type": "income",
+      "category": "Viagem",
+      "price": 5000,
+      "createdAt": "2024-04-29T14:00:00.000Z"
+    },
+    {
+      "id": "20",
+      "description": "Pagamento de Aluguel",
+      "type": "outcome",
+      "category": "Casa",
+      "price": 2000,
+      "createdAt": "2024-04-28T14:00:00.000Z"
+    },
+    {
+      "id": "21",
+      "description": "Venda de Fotografia",
+      "type": "income",
+      "category": "Artes",
+      "price": 700,
+      "createdAt": "2024-04-27T14:00:00.000Z"
+    },
+    {
+      "id": "22",
+      "description": "Compra de Material Escolar",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 250,
+      "createdAt": "2024-04-26T14:00:00.000Z"
     }
   ]
 }
