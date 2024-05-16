@@ -175,6 +175,22 @@
       "category": "Educação",
       "price": 250,
       "createdAt": "2024-04-26T14:00:00.000Z"
+    },
+    {
+      "id": "923e",
+      "description": "fernando",
+      "price": 2000,
+      "category": "curso rocket",
+      "type": "income",
+      "createdAt": "2024-05-16T14:12:07.287Z"
+    },
+    {
+      "id": "aa81",
+      "description": "iogurte",
+      "price": 4,
+      "category": "comida",
+      "type": "outcome",
+      "createdAt": "2024-05-16T14:38:24.371Z"
     }
   ]
 }

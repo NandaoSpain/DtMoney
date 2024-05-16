@@ -1,33 +1,46 @@
-import * as Dialog from "@radix-ui/react-dialog";
-import { CloseButton, Content, Overlay, TransactionType, TransactionTypeButton } from "./styles";
-import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
+import * as Dialog from '@radix-ui/react-dialog'
+import {
+  CloseButton,
+  Content,
+  Overlay,
+  TransactionType,
+  TransactionTypeButton,
+} from './styles'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import * as z from 'zod'
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
+import { useContext } from 'react'
 
 const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  type: z.enum(['income', 'outcome'])
+  type: z.enum(['income', 'outcome']),
 })
 
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
 export function NewTransactionModal() {
+  const { createTransaction } = useContext(TransactionsContext)
+
   const {
-    control, 
-    register, 
+    control,
+    register,
     handleSubmit,
-    formState: { isSubmitting } 
+    formState: { isSubmitting },
+    reset,
   } = useForm<NewTransactionFormInputs>({
-    resolver: zodResolver(newTransactionFormSchema)
+    resolver: zodResolver(newTransactionFormSchema),
   })
 
-  async function handleCreateNewTransaction(data: NewTransactionFormInputs){
-    await new Promise(resolve => setTimeout(resolve, 2000))
+  async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
+    const { description, price, category, type } = data
 
-    console.log(data)
+    await createTransaction({ description, price, category, type })
+
+    reset()
   }
 
   return (
@@ -37,44 +50,44 @@ export function NewTransactionModal() {
         <Content>
           <Dialog.Title>New Transaction</Dialog.Title>
           <CloseButton>
-            <X size={24}/>
+            <X size={24} />
           </CloseButton>
 
           <form action="" onSubmit={handleSubmit(handleCreateNewTransaction)}>
-            <input 
-              type="text" 
-              placeholder="Description" 
-              required
-              {...register("description")}
-            />
-            <input 
-              type="number" 
-              placeholder="Price" 
-              required
-              {...register("price", { valueAsNumber: true })}
-            />
-            <input 
+            <input
               type="text"
-              placeholder="Category" 
+              placeholder="Description"
               required
-              {...register("category")}
+              {...register('description')}
+            />
+            <input
+              type="number"
+              placeholder="Price"
+              required
+              {...register('price', { valueAsNumber: true })}
+            />
+            <input
+              type="text"
+              placeholder="Category"
+              required
+              {...register('category')}
             />
 
-            <Controller 
+            <Controller
               control={control}
               name="type"
               render={({ field }) => {
-                return(
-                  <TransactionType 
-                    onValueChange={field.onChange} 
+                return (
+                  <TransactionType
+                    onValueChange={field.onChange}
                     value={field.value}
                   >
                     <TransactionTypeButton variant="income" value="income">
-                      <ArrowCircleUp size={24}/>
+                      <ArrowCircleUp size={24} />
                       Income
                     </TransactionTypeButton>
                     <TransactionTypeButton variant="outcome" value="outcome">
-                      <ArrowCircleDown size={24}/>
+                      <ArrowCircleDown size={24} />
                       Outcome
                     </TransactionTypeButton>
                   </TransactionType>
