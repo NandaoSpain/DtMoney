@@ -25,13 +25,20 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([])
 
   async function fetchTransactions(query?: string) {
-    const response = await api.get('transactions', {
+    const response = await api.get('/transactions',{
       params: {
         q: query,
       }
     })
-    setTransactions(response.data)
-    console.log(response.data)
+    let filteredTransactions = response.data
+
+    if (query) {
+      filteredTransactions = filteredTransactions.filter((transaction: Transaction) =>
+        transaction.description.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+    setTransactions(filteredTransactions)
+    console.log(filteredTransactions)
   }
   useEffect(() =>{
     fetchTransactions()
